@@ -1,0 +1,473 @@
+/*
+*
+* Author: Emon Khan
+* Author URI: https://facebook.com/emonkhan2020
+* Version: 1.0.0
+* Description: This is personal portfolio site.
+*
+*/
+
+
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+
+
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+a, a:hover, a:active, a:link{
+    text-decoration: none;
+    color: #2ECC71;
+}
+
+
+/* Reuseable Component */
+
+    /* Section title */
+.section-title h1 {
+	font-size: 50px;
+	font-weight: 600;
+    margin: 0;
+    padding: 0 15px;
+    position: relative;
+}
+.section-title h1::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4px;
+	height: 75%;
+	background: #2ECC71;
+}
+.section-title span{
+    display: inline-block;
+    font-style: italic;
+    margin: 0;
+    padding: 0 15px;
+    position: relative;
+}
+.section-title span::before {
+	content: '';
+	position: absolute;
+	top: -16px;
+	left: 0;
+	width: 4px;
+	height: 173%;
+	background: #D1D7D7;
+}
+
+    /* btn */
+.df-btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 400;
+    color: #fff;
+    background: #2ECC71;
+    border: 2px solid #2ECC71;
+    border-radius: 30px;
+    transition: .3s ease-in-out;
+}
+.df-btn:hover {
+	background: transparent;
+	color: #000;
+	box-shadow: 0px 0px 14px 0px #2ECC71;
+}
+.custom-bg{
+    background: #F7F7F7;
+}
+
+
+/*=== Hero area start ===*/
+header{
+    background: linear-gradient(#00000080, #00000080), url(../img/home.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative
+}
+header .navbar-brand {
+	font-family: 'Lobster', cursive;
+	letter-spacing: 1px;
+    font-size: 23px;
+    color: #2ECC71 !important;
+}
+/* navigation */
+header a{
+    color: #ffffff !important
+}
+header a:hover{
+    color: #dfd7d7 !important
+}
+
+/* Hero content */
+header .hero-text-start{
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    display: table
+}
+.hero-text-body{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #ffffff
+}
+.hero-text-body h1 {
+	font-size: 50px;
+	letter-spacing: 2px
+}
+.hero-text-body h1 span{
+    color: #2ecc71
+}
+.hero-text-body h4 {
+	font-weight: 300;
+	letter-spacing: 2px
+}
+
+/* Mouse wheel */
+.mouse-wheel-start {
+	position: absolute;
+	bottom: 20%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 30px;
+	height: 45px;
+}
+.mouse-wheel-start a {
+	display: inline-block;
+	background: #252525;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ffffff;
+    border-radius: 45%;
+    position: relative;
+}
+.mouse-wheel-start a::after {
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: 13px;
+	width: 2px;
+	height: 8px;
+    background: #ffffff;
+    animation: scroll 1.8s infinite;
+}
+
+@keyframes scroll{
+    0%{top: 6px; opacity: 0;}
+    10%{top: 8px; opacity: .4;}
+    20%{top: 10px; opacity: 1;}
+    30%{top: 12px; opacity: 1;}
+    40%{top: 14px; opacity: 1;}
+    50%{top: 16px; opacity: 1;}
+    60%{top: 18px; opacity: 1;}
+    70%{top: 20px; opacity: 1;}
+    80%{top: 22px; opacity: 1;}
+    90%{top: 24px; opacity: 0;}
+    100%{top: 6px; opacity: 0;}
+}
+/*=== Hero area End ===*/
+
+
+
+/*=== About area start ===*/
+.about-photo-start {
+	height: 510px;
+	width: 75%;
+	margin-left: 20%;
+}
+.about-photo-start img {
+	box-shadow: 0px 0px 7px 0px #3C423E;
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.about-content-start h3{
+    color: #2ECC71;
+    font-weight: 400;
+    font-size: 25px;
+}
+.about-content-start h2{
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.about-content-start p{
+    font-size: 17px;
+    line-height: 30px;
+}
+.information-text p{
+    line-height: 15px;
+    font-weight: 400;
+}
+.work-btn{
+    background: transparent;
+    color: #000;
+}
+.work-btn:hover{
+    background: #2ECC71;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+/*=== About area End ===*/
+
+
+
+/*=== Service area start ===*/
+.single-service .card:hover{
+    transform: translateY(-10px);
+    transition: .3s ease-in-out;
+}
+.single-service i {
+	color: #2ECC71;
+	font-size: 50px;
+	padding-top: 16px;
+}
+.single-service h1{
+    font-size: 25px;
+    margin: 20px;
+}
+.single-service p{
+    font-weight: 400;
+    padding: 0 20px 20px;
+}
+/*=== Service area End ===*/
+
+
+/*=== Hire area start ===*/
+.hire-area-start{
+    background: linear-gradient(#27ae5fcc, #27ae5fcc), url(../img/hire.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.hire-info h2{
+    color: #fff;
+    font-size: 48px;
+}
+.hire-info h4{
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+}
+.hire-area-start .df-btn{
+    margin-top: 26px;
+    background: #fff;
+    color: #000;
+    border-color: #000;
+}
+.hire-area-start .df-btn:hover{
+    color: #fff;
+    background: transparent;
+}
+/*=== Hire area End ===*/
+
+
+/*=== Portfoli area Start ===*/
+.portfolio-filter{}
+.portfolio-filter button{
+    background: transparent;
+    border: none;
+    display: inline-block;
+    padding: 0 10px;
+}
+.portfolio-filter button:focus{
+    color: #2ECC71;
+    outline: none;
+}
+#my-portfolio .port-wrap{
+    width: 32%;
+    float: left;
+    margin: .58%;
+}
+.port-wrap img{
+    max-width: 100%;
+}
+.single-portfolio-item{
+    position: relative;
+}
+.portfoli-hover-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.80);
+    display: table;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: .3s ease-in-out;
+}
+.single-portfolio-item:hover .portfoli-hover-content{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+.portfoli-hover-content .portfoilo-hover-text{
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+/*=== Portfolio area End ===*/
+
+
+/*=== Testimonial area start ===*/
+.single-testimonial{
+}
+.single-testimonial .card{
+    padding: 30px;
+}
+.single-testimonial i {
+	font-size: 30px;
+	color: #2ECC71;
+}
+.single-testimonial p{
+    font-size: 15px;
+    margin: 20px 0;
+}
+.single-testimonial img {
+	width: 60px !important;
+	margin: 0 auto;
+}
+.single-testimonial h2 {
+	font-size: 16px;
+	margin-top: 15px;
+}
+.single-testimonial h4{
+    font-size: 14px;
+    font-style: italic;
+    color: #989c9c;
+}
+/*=== Testimonial area End ===*/
+
+
+/*=== Blog area start ===*/
+.post-img{
+    position: relative;
+}
+.post-img a img{
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    transition: .2s ease-in-out;
+}
+.post-img a img:hover{
+    opacity: .7;
+}
+.post-img span{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    color: #fff;
+    background: #2ECC71;
+    padding: 5px 10px;
+    border-radius: 0 5px 0 0;
+}
+.post-body h2 a{
+    font-size: 20px;
+}
+.post-body p{
+    font-size: 15px;
+    font-weight: 30;
+}
+.post-body span{
+    font-size: 14px;
+}
+/*=== Blog area start ===*/
+
+
+/*=== Contact area start ===*/
+.contact-area-start .form-control{
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+}
+.contact-area-start .form-control:focus{
+    box-shadow: 0 0 0 0;
+    border-bottom: 1px solid #2ECC71;
+}
+/*=== Contact area end ===*/
+
+
+
+/*=== Footer area start ===*/
+footer{
+    background: #000;
+    color: #fff;
+}
+.footer-top-single i{
+    color: #2ECC71;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+.footer-top-single a{
+    color: #fff;
+}
+.footer-social-menu li a{
+    display: inline-block;
+    background: #2ECC71;
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    padding: 0 5px;
+    line-height: 25px;
+    transition: .2s ease-in-out;
+}
+.footer-social-menu li a:hover{
+    transform: translateY(-2px);
+    background: transparent;
+}
+.footer-social-menu li:nth-child(1) a{
+    padding: 0 8px;
+}
+.footer-social-menu li i{
+    color: #fff;
+}
+/*=== Footer area end ===*/
+
+
+
+/*=== Responsive area start ===*/
+@media (max-width: 767px){
+    #my-portfolio .port-wrap{
+        width: 48.8%;
+    }
+    .section-title h1{
+        font-size: 30px;
+    }
+    .section-title h1::before{
+        content: "";
+        height: 100%;
+    }
+    .section-title span::before{
+        content: "";
+        margin-top: 15px;
+        height: 130%;
+    }
+    .about-photo-start{
+        width: 100%;
+        margin: 0;
+    }
+    .hire-info h2{
+        font-size: 30px;
+    }
+}
